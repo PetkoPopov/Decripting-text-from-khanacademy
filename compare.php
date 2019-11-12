@@ -1,5 +1,9 @@
 <body bgcolor="00ff59">
 <?php
+/**
+ *търси съвпадения от даден текста в друг текст например
+ * дали има"ing"или"the" в друг голям текст на английски 
+ */
 function compare(string $a,string $b)
 {
     $arr_string1=str_split($a);
