@@ -1,4 +1,9 @@
 <?php
+/**
+ *  
+ * @param type $some_text
+ * @return int
+ */
 function analize($some_text)
 {
 $array_for_analiz= str_split($some_text);

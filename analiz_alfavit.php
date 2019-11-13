@@ -18,6 +18,9 @@ include_once'table_for_analiz.php';
 </form>
     
     <?php
+    /**
+     * измерва с каква честота се повява символ в дадена аазбука засега само на латиница 
+     */
 $some_text='hello how are you are you ok the master going to the church i stay '
         . 'english in mind students book3 second edition'
         . 'do you know why she he is angry can you tall me when is it was build'
@@ -35,8 +38,12 @@ $some_text='hello how are you are you ok the master going to the church i stay '
         . 'pizza or fried chicken eating fast food helps working people end stuends  to get back to work as quickly '
         . 'as possible'
         . 'a service of love a story by adapted '
-        . 'was a young pianist with long ,slender,fingers,and blonde hairs HelloHello'
+        . 'was a young pianist with long ,slender,fingers,and blonde hairs ise themoon sky and the stouve'
+        . 'think that becouse she is ugly how match is friquency about Hello'
+        . 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'
+        . 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'
         ;
+
 $array_for_analiz= str_split($some_text);
 $rezult=[];
 $count=0;
@@ -87,16 +94,19 @@ if(!empty($_GET['text_for_analize']))
 {
     $some_text=$_GET['text_for_analize'];
 }
-echo$letter_for_analize;
-echo'<br/>';
-for($i=1;$i<=45;$i++)
-{
-    if(isset($analize_arr[$i][$letter_for_analize]))
-    {
-    $q=$analize_arr[$i][$letter_for_analize]*100;
-    echo '<meter value='.$q.' min=0 max='.$scale.'></meter><br/>';
-}}
-echo $q.'%';
+echo'<pre>';
+print_r($rezult);
+echo'</pre>';
+//echo$letter_for_analize;
+//echo'<br/>';
+//for($i=1;$i<=45;$i++)
+//{
+//    if(isset($analize_arr[$i][$letter_for_analize]))
+//    {
+//    $q=$analize_arr[$i][$letter_for_analize]*100;
+//    echo '<meter value='.$q.' min=0 max='.$scale.'></meter><br/>';
+//}}
+//echo $q.'%';
 //$table= new Table(2,20);
 //$table->size_height_button=39;
 //$table->size_width_button=43;
