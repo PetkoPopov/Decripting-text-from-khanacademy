@@ -1,6 +1,7 @@
 <?php
 /**
- *  
+ *  показва колко често се среща символ в един текст НЕСЪВЪРШЕННО 
+ * ако някоя буква я няма не я отчита (показва)
  * @param type $some_text
  * @return int
  */
@@ -28,5 +29,5 @@ foreach($array_for_analiz as $k=>$v)
     $count++;
 }
 $rezult['count']=$count;
-return $rezult;
+return $rezult;//масив
 }

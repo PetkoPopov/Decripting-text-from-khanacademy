@@ -40,8 +40,15 @@ $some_text='hello how are you are you ok the master going to the church i stay '
         . 'a service of love a story by adapted '
         . 'was a young pianist with long ,slender,fingers,and blonde hairs ise themoon sky and the stouve'
         . 'think that becouse she is ugly how match is friquency about Hello'
-        . 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'
-        . 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'
+        . 'select a position on the front of the carto fit the fog lamps'
+        . 'centre punch drill and bits for fitting lamps the are two types of electronic ignition the most common known as '
+        . 'inductiv storagethe advantages othe mojoryty use the existing contact breaker points'
+        . 'in the distrubutorinstead of producing of spark'
+        . 'or optical trigger  device in the distributor and the transistor switch '
+        . 'havve no moving parts and so cannot lose their adjusment become less eficient '
+        . 'or wear out in the way that mahanically operated'
+        . 'f this system is that the '
+        . ''
         ;
 
 $array_for_analiz= str_split($some_text);
@@ -55,7 +62,8 @@ foreach($array_for_analiz as $k=>$v)
         $v='space';
     }
     //////////
-    if($count%25==0)
+    //if($count%25==0)
+    if($count==count($array_for_analiz)-1)
     {
         $help_count=0;
         foreach($rezult as $k=>$val)
@@ -97,15 +105,16 @@ if(!empty($_GET['text_for_analize']))
 echo'<pre>';
 print_r($rezult);
 echo'</pre>';
-//echo$letter_for_analize;
+echo$letter_for_analize;
 //echo'<br/>';
 //for($i=1;$i<=45;$i++)
 //{
-//    if(isset($analize_arr[$i][$letter_for_analize]))
-//    {
-//    $q=$analize_arr[$i][$letter_for_analize]*100;
-//    echo '<meter value='.$q.' min=0 max='.$scale.'></meter><br/>';
-//}}
+    if(isset($analize_arr[0][$letter_for_analize]))
+    {
+    $q=$analize_arr[0][$letter_for_analize]*100;
+    echo '<meter value='.$q.' min=0 max='.$scale.'></meter>'.$q.'<br/>';
+    
+}
 //echo $q.'%';
 //$table= new Table(2,20);
 //$table->size_height_button=39;

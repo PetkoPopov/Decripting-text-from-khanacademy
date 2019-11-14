@@ -4,10 +4,10 @@
  *търси съвпадения от даден текста в друг текст например
  * дали има"ing"или"the" в друг голям текст на английски 
  */
-function compare(string $a,string $b)
+function compare(string $text,string $piece_text)
 {
-    $arr_string1=str_split($a);
-    $arr_string2=str_split($b);
+    $arr_string1=str_split($text);
+    $arr_string2=str_split($piece_text);
     $count=count($arr_string2);
     
     foreach($arr_string1 as $k=>$v)
@@ -36,7 +36,8 @@ function compare(string $a,string $b)
                
                if(($i+1)==$count){
                   $arr_string1[$k]='<mark>'.$arr_string1[$k].'</mark>';
-                   return $arr_string1;
+                   //return $arr_string1;
+                  return true;
                }
            }
         }
