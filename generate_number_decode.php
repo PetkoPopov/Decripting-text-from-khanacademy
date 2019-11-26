@@ -27,11 +27,11 @@ function generate_number_decode(int $number=4)
                 }
             }
             $h=[];
-            $h=$x;
+            $h[]=$x;
             $x=[];
         }
       
-//   echo'<pre>';
+//echo'<pre>';
 //print_r($h);
 //echo '</pre>';
 return $h;//масив със стрингове
